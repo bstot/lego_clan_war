@@ -1,0 +1,14 @@
+@charset "UFT-8";
+
+/* reset css */
+* {margin: 0; padding: 0;}
+body {line-height: 1;}
+/* reset css */
+
+.test_div {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    margin-right: 10px;
+}
