@@ -4,15 +4,231 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>LEGO 클랜전</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/lego_clan_war/index.css">
-    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script src="/lego_clan_war/index.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="test_div"></div>
-    <div class="test_div"></div>
-    <div class="test_div"></div>
-    <div class="test_div"></div>
+    <div id="container">
+        <div class="insert_member">
+            <label for="member">클랜전 인원을 입력해주세요</label>
+            <input id="member" type="text" placeholder="ex) 칭글1, 칭글2, 칭글3, 칭글4, 칭글5 ··· (쉼표로 구분)">
+            <div class="class_select">
+                <ul>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                    <li>
+                        <h4 class="member_name">미입력</h4>
+                        <span class="archor">아</span>
+                        <span class="slayer">슬</span>
+                        <span class="warload">워</span>
+                        <span class="elementallist">엘</span>
+                        <span class="mystic">미</span>
+                        <span class="assassin">어</span>
+                        <span class="gunner">거</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="member_list">
+                <p><span id="cname1">아처</span><span class="memeber_cnt">0</span> 명</p>
+                <p><span id="cname2">슬레</span><span class="memeber_cnt">0</span> 명</p>
+                <p><span id="cname3">워로드</span><span class="memeber_cnt">0</span> 명</p>
+                <p><span id="cname4">엘리</span><span class="memeber_cnt">0</span> 명</p>
+                <p><span id="cname5">미스틱</span><span class="memeber_cnt">0</span> 명</p>
+                <p><span id="cname6">어쌔신</span><span class="memeber_cnt">0</span> 명</p>
+                <p><span id="cname7">거너</span><span class="memeber_cnt">0</span> 명</p>
+                <p><span id="total_sum">총원</span><span class="memeber_cnt">0</span> 명</p>
+            </div>
+        </div>
+        <!-- 맵 영역 시작 -->
+        <div class="map_field">
+            <div id="map1">
+                <h2>화룡의 골짜기</h2>
+                <div class="row">
+                    <img src="/lego_clan_war/map1.png" alt="">
+                    <div class="column area1-1"></div>
+                    <div class="column area1-2"></div>
+                    <div class="column area1-3"></div>
+                    <div class="column area1-4"></div>
+                    <div class="column area1-5"></div>
+                    <div class="column start_point"></div>
+                    <p class="area_name">적진</p>
+                    <p class="area_name">본진</p>
+                    <p class="area_name">중앙</p>
+                    <p class="area_name">1시</p>
+                    <p class="area_name">7시</p>
+                </div>
+                <ul>
+                    <li> 본진 : <span class="area1-1"></span><br></li>
+                    <li> 적진 : <span class="area1-2"></span></li>
+                    <li> 중앙 : <span class="area1-3"></span></li>
+                    <li> 1시 : <span class="area1-4"></span></li>
+                    <li> 7시 : <span class="area1-5"></span></li>
+                </ul>
+            </div>
+            <div id="map2">
+                <h2>파도맞이 성채</h2>
+                <div class="row">
+                    <img src="/lego_clan_war/map2.png" alt="">
+                    <div class="column area2-1"></div>
+                    <div class="column area2-2"></div>
+                    <div class="column area2-3"></div>
+                    <div class="column area2-4"></div>
+                    <div class="column area2-5"></div>
+                    <div class="column start_point"></div>
+                    <p class="area_name">10시</p>
+                    <p class="area_name">12시</p>
+                    <p class="area_name">2시</p>
+                    <p class="area_name">5시</p>
+                    <p class="area_name">7시</p>
+                </div>
+                <ul>
+                    <li> 10시 : <span class="area2-1"></span></li>
+                    <li> 12시 : <span class="area2-2"></span></li>
+                    <li> 2시 : <span class="area2-3"></span></li>
+                    <li> 5시 : <span class="area2-4"></span></li>
+                    <li> 7시 : <span class="area2-5"></span></li>
+                </ul>
+            </div>
+            <div id="map3">
+                <h2>폭풍바위 고지</h2>
+                <div class="row">
+                    <img src="/lego_clan_war/map3.png" alt="">
+                    <div class="column area3-1"></div>
+                    <div class="column area3-2"></div>
+                    <div class="column area3-3"></div>
+                    <div class="column area3-4"></div>
+                    <div class="column area3-5"></div>
+                    <div class="column start_point"></div>
+                    <p class="area_name">적진</p>
+                    <p class="area_name">본진</p>
+                    <p class="area_name">중앙</p>
+                    <p class="area_name">2시</p>
+                    <p class="area_name">7시</p>
+                </div>
+                <ul>
+                    <li> 본진 : <span class="area3-1"></span></li>
+                    <li> 적진 : <span class="area3-2"></span></li>
+                    <li> 중앙 : <span class="area3-3"></span></li>
+                    <li> 1시 : <span class="area3-4"></span></li>
+                    <li> 7시 : <span class="area3-5"></span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 맵 영역 끝 -->
+    </div>
+    <div class="copyright_text">
+        LEGO<br>CLAN
+    </div>
+    <div class="now_time">
+        <span class="time"></span>
+        <span class="day"></span>
+        <div class="n-time">
+            <p class="time-title"></p>
+            <span class="hours"></span>
+            <span class="col">:</span>
+            <span class="minutes"></span>
+            <span class="col">:</span>
+            <span class="seconds"></span>
+        </div>
+    </div>
 </body>
 </html>

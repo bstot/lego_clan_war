@@ -1,14 +1,363 @@
 @charset "UFT-8";
 
-/* reset css */
+/* css reset start */
 * {margin: 0; padding: 0;}
-body {line-height: 1;}
-/* reset css */
+body {line-height: 1; font-family: 'Noto Sans KR', sans-serif;}
+img {vertical-align: bottom;}
+div {box-sizing: border-box;}
+ul, li, ol {list-style: none; margin: 0;}
+h1, h2, h3, h1, h2, h3 { margin: 0;}
+.clear::after {content: ""; display: block; clear: both;}
+/* css reset end */
 
-.test_div {
+body {
+    overflow-x: hidden;
+}
+
+#container {
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #f4f4f4;
+}
+
+/* 입력 영역 css */
+.insert_member {
+    width: 600px;
+    min-height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.insert_member > label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.insert_member > input::placeholder {
+    color: #777;
+    font-size: 12px;
+}
+
+.insert_member > input {
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    text-indent: 10px;
+    box-sizing: border-box;
+}
+
+.insert_member .class_select {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.insert_member .class_select ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.insert_member .class_select ul li {
+    width: calc(20% - 6px);
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.insert_member .class_select ul li.disable {
+    position: relative;
+}
+
+.insert_member .class_select ul li.disable::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.insert_member .class_select ul li.disable .reset_member {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: coral;
+    transition: all 0.3s;
+    font-size: 20px;
+    z-index: 51;
+    cursor: pointer;
+}
+
+.insert_member .class_select ul li.disable:hover .reset_member {
+    opacity: 1;
+}
+
+.insert_member .class_select ul li h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.insert_member .class_select ul li .member_insert_input {
+    width: 70%;
+    margin: 10px auto;
+    height: 20px;
+    text-indent: 10px;
+}
+
+.insert_member .class_select ul li span {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    width: 28%;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+
+.insert_member .class_select ul li span:hover {
+    opacity: 1;
+}
+
+.insert_member .class_select ul li span.on {
+    opacity: 1;
+}
+
+.insert_member .class_select ul li span.warload {background-color: saddlebrown;}
+.insert_member .class_select ul li span.mystic {background-color: #DB6B97;}
+.insert_member .class_select ul li span.gunner {background-color: #146356;}
+.insert_member .class_select ul li span.elementallist {background-color: #1C6DD0;}
+.insert_member .class_select ul li span.slayer {background-color: #ED1846;}
+.insert_member .class_select ul li span.archor {background-color: #FF7F3F;}
+.insert_member .class_select ul li span.assassin {background-color: #65369d;}
+
+.insert_member .member_list {
+    text-align: left;
+    position: absolute;
+    right: -390px;
+    top: 90px;
+}
+
+.insert_member .member_list p {
+    width: 120px;
+    font-size: 20px;
+}
+
+.insert_member .member_list p:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.insert_member .member_list p span:nth-child(1) {
+    display: inline-block;
+    width: 70px;
+}
+
+.insert_member .member_list p .memeber_cnt {
+    display: inline-block;
+    width: 20px;
+    text-align: right;
+}
+/* 입력 영역 css */
+
+/* 맵 영역 css */
+.map_field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map_field > div {
+    width: 600px;
+    position: relative;
+}
+
+.map_field .row .member {
+    color: #fff;
+    width: 50%;
     float: left;
-    width: 200px;
-    height: 200px;
-    background-color: cornflowerblue;
-    margin-right: 10px;
+    text-align: center;
+}
+
+.map_field .member.warload {background-color: saddlebrown;}
+.map_field .member.mystic {background-color: #DB6B97;}
+.map_field .member.gunner {background-color: #146356;}
+.map_field .member.elementallist {background-color: #1C6DD0;}
+.map_field .member.slayer {background-color: #FF1700;}
+.map_field .member.archor {background-color: #FF7F3F;}
+.map_field .member.assassin {background-color: #65369d;}
+
+
+.map_field .row .member .card-header {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+}
+
+.map_field > div > h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.map_field > div > .row {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.map_field > div > .row img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,.3);
+}
+
+.map_field > div > ul {
+    margin-top: 10px;
+}
+
+.map_field > div > ul li {
+    font-size: 18px;
+}
+
+.map_field > div > ul li {
+    float: left;
+    width: 50%;
+}
+
+.map_field > div > ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.map_field > div > ul li span div {
+    display: inline-block;
+    background-color: transparent !important;
+}
+
+.map_field > div > ul li span div:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    position: relative;
+    top: -1px;
+    background-color: violet;
+    margin: 0 5px;
+}
+
+.map_field > div > .row .column {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    width: 100px;
+    height: 48px;
+}
+
+
+.map_field > div > .row .area_name {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: anEffect 3.0s infinite;
+}
+
+@keyframes anEffect {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#map1 .column:nth-of-type(1) { top: 280px; left: 300px;}
+#map1 .column:nth-of-type(2) { top: 50px; left: 200px;}
+#map1 .column:nth-of-type(3) { top: 160px; left: 250px;}
+#map1 .column:nth-of-type(4) { top: 50px; left: 430px;}
+#map1 .column:nth-of-type(5) { top: 270px; left: 70px;}
+
+#map1 .area_name:nth-of-type(1) { top: 20px; left: 230px;}
+#map1 .area_name:nth-of-type(2) { top: 250px; left: 330px;}
+#map1 .area_name:nth-of-type(3) { top: 130px; left: 280px;}
+#map1 .area_name:nth-of-type(4) { top: 20px; left: 465px;}
+#map1 .area_name:nth-of-type(5) { top: 240px; left: 105px;}
+
+#map2 .column:nth-of-type(1) { top: 100px; left: 60px;}
+#map2 .column:nth-of-type(2) { top: 10px; left: 253px;}
+#map2 .column:nth-of-type(3) { top: 110px; left: 445px;}
+#map2 .column:nth-of-type(4) { top: 335px; left: 390px;}
+#map2 .column:nth-of-type(5) { top: 330px; left: 110px;}
+
+#map2 .area_name:nth-of-type(1) { top: 140px; left: 183px;}
+#map2 .area_name:nth-of-type(2) { top: 90px; left: 283px;}
+#map2 .area_name:nth-of-type(3) { top: 140px; left: 395px;}
+#map2 .area_name:nth-of-type(4) { top: 285px; left: 340px;}
+#map2 .area_name:nth-of-type(5) { top: 285px; left: 230px;}
+
+#map3 .column:nth-of-type(1) { top: 290px; left: 340px;}
+#map3 .column:nth-of-type(2) { top: 40px; left: 150px;}
+#map3 .column:nth-of-type(3) { top: 160px; left: 250px;}
+#map3 .column:nth-of-type(4) { top: 90px; left: 400px;}
+#map3 .column:nth-of-type(5) { top: 240px; left: 90px;}
+
+#map3 .area_name:nth-of-type(1) { top: 10px; left: 180px;}
+#map3 .area_name:nth-of-type(2) { top: 260px; left: 370px;}
+#map3 .area_name:nth-of-type(3) { top: 130px; left: 280px;}
+#map3 .area_name:nth-of-type(4) { top: 60px; left: 435px;}
+#map3 .area_name:nth-of-type(5) { top: 210px; left: 125px;}
+
+.map_field > div > .row .column.start_point {
+    top: 0;
+    left: 0;
+    height: initial;
+    background: none;
+
+}
+
+.map_field > div > .row .column:not(.start_point) .member {
+    float: left;
+    width: 50%;
+    border-radius: 5px;
+}
+/* 맵 영역 css */
+
+.copyright_text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 200px;
+    z-index: -50;
+    opacity: 0.05;
+    padding: 10%;
+}
+
+.now_time {
+    position: fixed;
+    top: 150px;
+    left: 200px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.now_time div {
+    margin-top: 10px;
 }
