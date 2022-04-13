@@ -78,6 +78,13 @@ $(document).ready(function() {
                     $("#cname7").siblings().text(cname7_num);
                     class_div = 7;
                 }; break;
+                case "paladin" : {
+                    var cname8_num = $("#cname8").siblings().text();
+                    cname8_num = parseInt(cname8_num);
+                    cname8_num += 1;
+                    $("#cname9").siblings().text(cname8_num);
+                    class_div = 8;
+                }; break;
             }
 
             var total_sum = $("#total_sum").siblings().text();
@@ -115,6 +122,10 @@ $(document).ready(function() {
 
             if(class_div == 7) {
                 $(".map_field > div .start_point").append("<div class='card member gunner mm"+member_order+"'><span class='card-header'>"+member_name+"</span></div>");
+            }
+
+            if(class_div == 8) {
+                $(".map_field > div .start_point").append("<div class='card member paladin mm"+member_order+"'><span class='card-header'>"+member_name+"</span></div>");
             }
 
             $(this).addClass("on");
@@ -161,6 +172,7 @@ $(document).ready(function() {
                             case "미" : {classCntMius(5); classMapMius(member_order2);}; break;
                             case "어" : {classCntMius(6); classMapMius(member_order2);}; break;
                             case "거" : {classCntMius(7); classMapMius(member_order2);}; break;
+                            case "팔" : {classCntMius(8); classMapMius(member_order2);}; break;
                         }
                     }
                 });
@@ -221,7 +233,16 @@ $(document).ready(function() {
                 if(this_len > 0) {
 
                     var member_class = $(this).children().attr("class");
-                    member_class = member_class.replace(/ /gi, "");member_class = member_class.replace("member","");member_class = member_class.replace("card","");member_class = member_class.replace("warload","");member_class = member_class.replace("mystic","");member_class = member_class.replace("gunner","");member_class = member_class.replace("elementallist","");member_class = member_class.replace("slayer","");member_class = member_class.replace("archor","");
+                    member_class = member_class.replace(/ /gi, "");
+                    member_class = member_class.replace("member","");
+                    member_class = member_class.replace("card","");
+                    member_class = member_class.replace("warload","");
+                    member_class = member_class.replace("mystic","");
+                    member_class = member_class.replace("gunner","");
+                    member_class = member_class.replace("elementallist","");
+                    member_class = member_class.replace("slayer","");
+                    member_class = member_class.replace("archor","");
+                    member_class = member_class.replace("paladin","");
                     var set_member = $(this).attr("class");
                     set_member = set_member.replace(/ /gi, "");set_member = set_member.replace("column","");set_member = set_member.replace("ui-sortable","");
                     var member_text = $("#map2 ."+set_member+"").html();
