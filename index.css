@@ -134,14 +134,14 @@ body {
     opacity: 1;
 }
 
-.insert_member .class_select ul li span.warload {background-color: saddlebrown;}
-.insert_member .class_select ul li span.mystic {background-color: #DB6B97;}
-.insert_member .class_select ul li span.gunner {background-color: #146356;}
-.insert_member .class_select ul li span.elementallist {background-color: #1C6DD0;}
-.insert_member .class_select ul li span.slayer {background-color: #ED1846;}
-.insert_member .class_select ul li span.archor {background-color: #FF7F3F;}
-.insert_member .class_select ul li span.assassin {background-color: #65369d;}
-.insert_member .class_select ul li span.paladin {background-color: #dbcb38;}
+.insert_member .class_select ul li span.warload { background-color: saddlebrown; }
+.insert_member .class_select ul li span.mystic { background-color: #DB6B97; }
+.insert_member .class_select ul li span.gunner { background-color: #146356; }
+.insert_member .class_select ul li span.elementallist { background-color: #1C6DD0; }
+.insert_member .class_select ul li span.slayer { background-color: #ED1846; }
+.insert_member .class_select ul li span.archor { background-color: #FF7F3F; }
+.insert_member .class_select ul li span.assassin { background-color: #65369d; }
+.insert_member .class_select ul li span.paladin { background-color: #dbcb38; }
 
 .insert_member .member_list {
     text-align: left;
