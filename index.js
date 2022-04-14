@@ -227,6 +227,9 @@ $(document).ready(function() {
             $("#map1 > ul li span").text(""); // 드랍될때 텍스트 제거
             $("#map2 > ul li span").text(""); // 드랍될때 텍스트 제거
             $("#map3 > ul li span").text(""); // 드랍될때 텍스트 제거
+            $(".member_area").each(function() {
+                console.log($(this).find("span").children("div").length());
+            });
 
             $("#map1 .row .column:not(.start_point)").each(function() {
                 var this_len = $(this).children().length;
@@ -380,13 +383,13 @@ function remaindTime() {
     } else if(nt>et) { //현재시간이 종료시간보다 크면
         $(".time-title").html("클랜전 진행중");
         $(".time-title").css({
-            "color":"red"
+            "color":"#ed1846;"
         });
     } else { //현재시간이 오픈시간보다 늦고 마감시간보다 이르면 마감시간까지 남은 시간을 구한다.
         $(".time-title").css({
             "color":"blue"
         });
-        $(".time-title").html("클랜전 시작까지 남은시간");
+        $(".time-title").html("클랜전 시작까지 남은 시간");
         sec = parseInt(et - nt) / 1000;
         day  = parseInt(sec/60/60/24);
         sec = (sec - (day * 60 * 60 * 24));
