@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    setTimeout(function() {
+        $(".now_time").fadeIn();
+        $(".map_field > div").addClass("t-fx");
+    }, 2000);
+
     $("#member").change(function() {
         var member_val = $(this).val();
         member_val = member_val.split(",");
