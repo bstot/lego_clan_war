@@ -180,6 +180,15 @@ body {
 .map_field > div {
     width: 600px;
     position: relative;
+    transition: all 0.3s;
+}
+
+.map_field > div.on {
+    opacity: 1;
+}
+
+.map_field > div.off {
+    opacity: 0.5;
 }
 
 .map_field .row .member {

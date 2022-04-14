@@ -11,15 +11,17 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/lego_clan_war/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="//cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script src="/lego_clan_war/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div id="container">
-        <div class="insert_member">
+        <div class="insert_member" data-aos="fade-in" data-aos-duration="700">
             <label for="member">클랜전 인원을 입력해주세요</label>
             <input id="member" type="text" placeholder="ex) 소장1, 소장2, 소장3, 소장4, 소장5 ··· (쉼표로 구분)">
             <div class="class_select">
@@ -137,7 +139,7 @@
                 </ul>
             </div>
 
-            <div class="member_list">
+            <div class="member_list" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300">
                 <p><span id="cname1">아처</span><span class="memeber_cnt">0</span> 명</p>
                 <p><span id="cname2">슬레</span><span class="memeber_cnt">0</span> 명</p>
                 <p><span id="cname3">워로드</span><span class="memeber_cnt">0</span> 명</p>
@@ -151,7 +153,7 @@
         </div>
         <!-- 맵 영역 시작 -->
         <div class="map_field">
-            <div id="map1">
+            <div id="map1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="700" data-aos-delay="500">
                 <h2>화룡의 골짜기</h2>
                 <div class="row">
                     <img src="/lego_clan_war/map1.png" alt="">
@@ -175,7 +177,7 @@
                     <li> 7시 : <span class="area1-5"></span></li>
                 </ul>
             </div>
-            <div id="map2">
+            <div id="map2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="700" data-aos-delay="700">
                 <h2>파도맞이 성채</h2>
                 <div class="row">
                     <img src="/lego_clan_war/map2.png" alt="">
@@ -199,7 +201,7 @@
                     <li> 7시 : <span class="area2-5"></span></li>
                 </ul>
             </div>
-            <div id="map3">
+            <div id="map3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="700" data-aos-delay="900">
                 <h2>폭풍바위 고지</h2>
                 <div class="row">
                     <img src="/lego_clan_war/map3.png" alt="">
@@ -241,5 +243,9 @@
             <span class="seconds"></span>
         </div>
     </div>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

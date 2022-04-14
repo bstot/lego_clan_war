@@ -201,6 +201,14 @@ $(document).ready(function() {
         $(".mm"+d).remove();
     }
 
+    $(".map_field > div").mouseenter(function() {
+        $(this).addClass("on").siblings().addClass("off");
+    });
+
+    $(".map_field > div").mouseleave(function() {
+        $(".map_field > div").removeClass("on").removeClass("off");
+    });
+
     $(".column").sortable({
         // 드래그 앤 드롭 단위 css 선택자
         connectWith: ".column",
