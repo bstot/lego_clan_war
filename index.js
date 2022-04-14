@@ -82,7 +82,7 @@ $(document).ready(function() {
                     var cname8_num = $("#cname8").siblings().text();
                     cname8_num = parseInt(cname8_num);
                     cname8_num += 1;
-                    $("#cname9").siblings().text(cname8_num);
+                    $("#cname8").siblings().text(cname8_num);
                     class_div = 8;
                 }; break;
             }
