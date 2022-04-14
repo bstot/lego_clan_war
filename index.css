@@ -141,7 +141,7 @@ body {
 .insert_member .class_select ul li span.slayer {background-color: #ED1846;}
 .insert_member .class_select ul li span.archor {background-color: #FF7F3F;}
 .insert_member .class_select ul li span.assassin {background-color: #65369d;}
-.insert_member .class_select ul li span.paladin {background-color: #e6f700;}
+.insert_member .class_select ul li span.paladin {background-color: #dbcb38;}
 
 .insert_member .member_list {
     text-align: left;
@@ -196,7 +196,7 @@ body {
 .map_field .member.slayer {background-color: #FF1700;}
 .map_field .member.archor {background-color: #FF7F3F;}
 .map_field .member.assassin {background-color: #65369d;}
-.map_field .member.paladin {background-color: #c8d14a;}
+.map_field .member.paladin {background-color: #dbcb38;}
 
 
 .map_field .row .member .card-header {
