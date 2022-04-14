@@ -214,7 +214,7 @@ $(document).ready(function() {
         $(".map_field > div").removeClass("on").removeClass("off");
     });
 
-    var test;
+    var memberNum;
 
     $(".column").sortable({
         // 드래그 앤 드롭 단위 css 선택자
@@ -279,8 +279,15 @@ $(document).ready(function() {
             });
 
 
-            test = $(".map_field > div > ul li span").children().length;
-            console.log(test);
+            memberNum = $(".map_field > div > ul li span").children().length;
+            if(memberNum == 30) {
+                if (!confirm("인원 배치가 완료되었습니다\n스크린샷을 저장하시겠습니까?")) {
+
+                } else {
+                    alert("스크린샷을 저장합니다.");
+                    $("#capture_btn").click();
+                }
+            }
         }
     });
     // 해당 클래스 하위의 텍스트 드래그를 막는다.
@@ -414,12 +421,13 @@ function remaindTime() {
         $(".seconds").html(sec);
     }
 
-    $("#shot").on("click", function () {
+    $("#capture_btn").on("click", function () {
         // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
         html2canvas(document.querySelector("#capture_area")).then(canvas => {
             saveAs(canvas.toDataURL('image/png'), "capture-test.png");
         });
     });
+
     function saveAs(uri, filename) {
         // 캡쳐된 파일을 이미지 파일로 내보낸다.
         var link = document.createElement('a');
