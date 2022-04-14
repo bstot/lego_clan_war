@@ -190,11 +190,11 @@ body {
 }
 
 .map_field > div.on {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .map_field > div.off {
-    opacity: 0.5;
+    opacity: 0.3 !important;
 }
 
 .map_field .row .member {
