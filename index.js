@@ -214,6 +214,8 @@ $(document).ready(function() {
         $(".map_field > div").removeClass("on").removeClass("off");
     });
 
+    var test;
+
     $(".column").sortable({
         // 드래그 앤 드롭 단위 css 선택자
         connectWith: ".column",
@@ -227,9 +229,8 @@ $(document).ready(function() {
             $("#map1 > ul li span").text(""); // 드랍될때 텍스트 제거
             $("#map2 > ul li span").text(""); // 드랍될때 텍스트 제거
             $("#map3 > ul li span").text(""); // 드랍될때 텍스트 제거
-            $(".member_area").each(function() {
-                console.log($(this).find("span").children("div").length());
-            });
+            test = $(".map_field > div > ul li span").children().length;
+            console.log(test);
 
             $("#map1 .row .column:not(.start_point)").each(function() {
                 var this_len = $(this).children().length;
