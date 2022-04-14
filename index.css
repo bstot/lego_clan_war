@@ -16,6 +16,8 @@ body {
 
 #container {
     width: 100%;
+    max-width: 1920px;
+    min-width: 1920px;
     padding: 20px 20px;
     background-color: #f4f4f4;
 }
@@ -229,6 +231,15 @@ body {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 3px 3px rgba(0,0,0,.3);
+    transition: all 0.3s;
+}
+
+.map_field > div.on > .row img {
+    box-shadow: 0 0 20px 3px rgba(0,0,0,1);
+}
+
+.map_field > div.off > .row img {
+    box-shadow: 0;
 }
 
 .map_field > div > ul {
