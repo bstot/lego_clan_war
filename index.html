@@ -10,16 +10,21 @@
     <link href="//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="/lego_clan_war/index.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="//cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script src="//unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="//html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
     <script src="/lego_clan_war/index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <div id ="shot">스크린샷 테스트</div>
     <div id="container">
         <div class="insert_member" data-aos="fade-in" data-aos-duration="700">
             <label for="member">클랜전 인원을 입력해주세요</label>
@@ -152,7 +157,7 @@
             </div>
         </div>
         <!-- 맵 영역 시작 -->
-        <div class="map_field">
+        <div class="map_field" id="capture_area">
             <div id="map1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="700" data-aos-delay="500">
                 <h2>화룡의 골짜기</h2>
                 <div class="row">

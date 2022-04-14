@@ -229,8 +229,6 @@ $(document).ready(function() {
             $("#map1 > ul li span").text(""); // 드랍될때 텍스트 제거
             $("#map2 > ul li span").text(""); // 드랍될때 텍스트 제거
             $("#map3 > ul li span").text(""); // 드랍될때 텍스트 제거
-            test = $(".map_field > div > ul li span").children().length;
-            console.log(test);
 
             $("#map1 .row .column:not(.start_point)").each(function() {
                 var this_len = $(this).children().length;
@@ -279,6 +277,10 @@ $(document).ready(function() {
                     $("#map3 > ul > li").find("."+set_member+"").append(member_text);
                 }
             });
+
+
+            test = $(".map_field > div > ul li span").children().length;
+            console.log(test);
         }
     });
     // 해당 클래스 하위의 텍스트 드래그를 막는다.
@@ -411,6 +413,32 @@ function remaindTime() {
         $(".minutes").html(min);
         $(".seconds").html(sec);
     }
+
+    $("#shot").on("click", function () {
+        // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
+        html2canvas(document.querySelector("#capture_area")).then(canvas => {
+            saveAs(canvas.toDataURL('image/png'), "capture-test.png");
+        });
+    });
+    function saveAs(uri, filename) {
+        // 캡쳐된 파일을 이미지 파일로 내보낸다.
+        var link = document.createElement('a');
+        if (typeof link.download === 'string') {
+            link.href = uri;
+            link.download = filename;
+            document
+                .body
+                .appendChild(link);
+            link.click();
+            document
+                .body
+                .removeChild(link);
+        } else {
+            window.open(uri);
+        }
+    }
+
 }
 
 setInterval(remaindTime,999); //1초마다 검사를 해주면 실시간으로 시간을 알 수 있다.
+
