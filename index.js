@@ -206,13 +206,21 @@ $(document).ready(function() {
         $(".mm"+d).remove();
     }
 
-    $(".map_field > div").mouseenter(function() {
-        $(this).addClass("on").siblings().addClass("off");
-    });
+    mapHover(1);
+    function mapHover(ht) {
+        if (ht == 1) {
+            $(".map_field > div").mouseenter(function() {
+                $(this).addClass("on").siblings().addClass("off");
+            });
 
-    $(".map_field > div").mouseleave(function() {
-        $(".map_field > div").removeClass("on").removeClass("off");
-    });
+            $(".map_field > div").mouseleave(function() {
+                $(".map_field > div").removeClass("on").removeClass("off");
+            });
+        } else {
+
+        }
+    }
+
 
     var memberNum;
 
@@ -424,10 +432,13 @@ function remaindTime() {
 
     $("#capture_btn span").on("click", function () {
         $("#capture_btn").fadeOut();
+        mapHover(2);
         // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
         html2canvas(document.querySelector("#capture_area")).then(canvas => {
             saveAs(canvas.toDataURL('image/png'), "클랜전.png");
         });
+        console.log("언제 찍힘?");
+        mapHover(1);
     });
 
     function saveAs(uri, filename) {
