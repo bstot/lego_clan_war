@@ -338,12 +338,17 @@ $(document).ready(function() {
     }
 
     $("#capture_btn span").on("click", function () {
+        var nowDay = $(".time").text();
+        nowDay += " ";
+        nowDay += $(".day").text();
+
         $(".map_field > div > .row .area_name").css({"animation":"none"});
+
         mapHover(2);
         $("#capture_btn").fadeOut();
         // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
         html2canvas(document.querySelector("#capture_area")).then(canvas => {
-            saveAs(canvas.toDataURL('image/png'), "클랜전.png");
+            saveAs(canvas.toDataURL('image/png'), nowDay+"_클랜전.png");
         });
 
         setTimeout(function() {
