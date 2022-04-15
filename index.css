@@ -220,6 +220,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #FF7F3F;
     padding: 3px 5px;
     border-radius: 5px;
+    color: #ffffff;
 }
 
 .insert_member .member_list p span:nth-child(1)#cname1 { background-color: #FF7F3F; }

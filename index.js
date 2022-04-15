@@ -415,9 +415,9 @@ function remaindTime() {
         sec = (sec - (hour*60*60));
         min = parseInt(sec/60);
         sec = parseInt(sec-(min*60));
+
     if(hour<10){
         hour="0"+hour;
-
     }
 
     if(min<10){
