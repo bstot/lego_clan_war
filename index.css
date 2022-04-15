@@ -202,7 +202,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
     position: absolute;
     right: -390px;
-    top: 90px;
+    top: 60px;
 }
 
 .insert_member .member_list p {
@@ -217,7 +217,20 @@ body::-webkit-scrollbar-thumb {
 .insert_member .member_list p span:nth-child(1) {
     display: inline-block;
     width: 70px;
+    background-color: #FF7F3F;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: #333;
 }
+
+.insert_member .member_list p span:nth-child(1)#cname1 { background-color: #FF7F3F; }
+.insert_member .member_list p span:nth-child(1)#cname2 { background-color: #ED1846; }
+.insert_member .member_list p span:nth-child(1)#cname3 { background-color: saddlebrown; }
+.insert_member .member_list p span:nth-child(1)#cname4 { background-color: #1C6DD0; }
+.insert_member .member_list p span:nth-child(1)#cname5 { background-color: #DB6B97; }
+.insert_member .member_list p span:nth-child(1)#cname6 { background-color: #65369d; }
+.insert_member .member_list p span:nth-child(1)#cname7 { background-color: #146356; }
+.insert_member .member_list p span:nth-child(1)#cname8 { background-color: #dbcb38; }
 
 .insert_member .member_list p .memeber_cnt {
     display: inline-block;
