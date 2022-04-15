@@ -25,7 +25,7 @@ $(document).ready(function() {
     selectClass();
     function selectClass() {
         $(".insert_member .class_select ul li span").click(function() {
-            if($(this).siblings("h4").text() == "미입력") {
+            if($(this).siblings("h4").text() == "미입력" || $(this).siblings("h4").text() == "") {
                 alert("선택된 인원이 없습니다.");
                 return;
             }
