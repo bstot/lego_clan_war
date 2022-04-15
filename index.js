@@ -207,20 +207,6 @@ $(document).ready(function() {
     }
 
     mapHover(1);
-    function mapHover(ht) {
-        if (ht == 1) {
-            $(".map_field > div").mouseenter(function() {
-                $(this).addClass("on").siblings().addClass("off");
-            });
-
-            $(".map_field > div").mouseleave(function() {
-                $(".map_field > div").removeClass("on").removeClass("off");
-            });
-        } else {
-
-        }
-    }
-
 
     var memberNum;
 
@@ -452,6 +438,20 @@ function remaindTime() {
             document.body.removeChild(link);
         } else {
             window.open(uri);
+        }
+    }
+
+    function mapHover(ht) {
+        if (ht == 1) {
+            $(".map_field > div").mouseenter(function() {
+                $(this).addClass("on").siblings().addClass("off");
+            });
+
+            $(".map_field > div").mouseleave(function() {
+                $(".map_field > div").removeClass("on").removeClass("off");
+            });
+        } else {
+
         }
     }
 
