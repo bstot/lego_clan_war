@@ -284,8 +284,9 @@ $(document).ready(function() {
                 if (!confirm("인원 배치가 완료되었습니다\n스크린샷을 저장하시겠습니까?")) {
 
                 } else {
-                    alert("스크린샷을 저장합니다.");
-                    $("#capture_btn").click();
+                    $(".map_field > div > .row .area_name").css({"animation":"none"});
+                    $(".map_field > div").removeClass("on").removeClass("off");
+                    $("#capture_btn").fadeIn();
                 }
             }
         }
@@ -421,10 +422,11 @@ function remaindTime() {
         $(".seconds").html(sec);
     }
 
-    $("#capture_btn").on("click", function () {
+    $("#capture_btn span").on("click", function () {
+        $("#capture_btn").fadeOut();
         // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
         html2canvas(document.querySelector("#capture_area")).then(canvas => {
-            saveAs(canvas.toDataURL('image/png'), "capture-test.png");
+            saveAs(canvas.toDataURL('image/png'), "클랜전.png");
         });
     });
 
@@ -434,13 +436,9 @@ function remaindTime() {
         if (typeof link.download === 'string') {
             link.href = uri;
             link.download = filename;
-            document
-                .body
-                .appendChild(link);
+            document.body.appendChild(link);
             link.click();
-            document
-                .body
-                .removeChild(link);
+            document.body.removeChild(link);
         } else {
             window.open(uri);
         }
