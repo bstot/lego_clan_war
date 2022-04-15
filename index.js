@@ -304,6 +304,7 @@ $(document).ready(function() {
             $(this).parent().prepend("<h4 class='member_name'>"+member_name_value+"</h4>");
             $(this).remove();
 
+            member_name_value = "";
             memberNameChange();
         });
     }

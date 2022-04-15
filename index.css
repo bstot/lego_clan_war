@@ -219,6 +219,7 @@ body {
 .map_field {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .map_field > div {
@@ -260,6 +261,9 @@ body {
     cursor: pointer;
     display: block;
     padding: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: keep-all;
 }
 
 .map_field > div > h2 {
@@ -289,7 +293,9 @@ body {
 }
 
 .map_field > div > ul {
-    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px 10px;
+    border-radius: 10px;
 }
 
 .map_field > div > ul li {
