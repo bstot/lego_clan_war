@@ -441,20 +441,20 @@ function remaindTime() {
         }
     }
 
-    function mapHover(ht) {
-        if (ht == 1) {
-            $(".map_field > div").mouseenter(function() {
-                $(this).addClass("on").siblings().addClass("off");
-            });
+}
 
-            $(".map_field > div").mouseleave(function() {
-                $(".map_field > div").removeClass("on").removeClass("off");
-            });
-        } else {
+function mapHover(ht) {
+    if (ht == 1) {
+        $(".map_field > div").mouseenter(function() {
+            $(this).addClass("on").siblings().addClass("off");
+        });
 
-        }
+        $(".map_field > div").mouseleave(function() {
+            $(".map_field > div").removeClass("on").removeClass("off");
+        });
+    } else {
+
     }
-
 }
 
 setInterval(remaindTime,999); //1초마다 검사를 해주면 실시간으로 시간을 알 수 있다.
