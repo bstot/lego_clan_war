@@ -275,8 +275,6 @@ $(document).ready(function() {
                 if (!confirm("인원 배치가 완료되었습니다\n스크린샷을 저장하시겠습니까?")) {
 
                 } else {
-                    $(".map_field > div > .row .area_name").css({"animation":"none"});
-                    $(".map_field > div").removeClass("on").removeClass("off");
                     $("#capture_btn").fadeIn();
                 }
             }
@@ -324,15 +322,34 @@ $(document).ready(function() {
         $(element_now_time).children("span.day").text(getday());
     }, 999)
 
+    mapHover(1);
+    function mapHover(ht) {
+        if (ht == 1) {
+            $(".map_field > div").mouseenter(function() {
+                $(this).addClass("on").siblings().addClass("off");
+            });
+
+            $(".map_field > div").mouseleave(function() {
+                $(".map_field > div").removeClass("on").removeClass("off");
+            });
+        } else {
+            $(".map_field > div").removeClass("on").removeClass("off");
+        }
+    }
+
     $("#capture_btn span").on("click", function () {
-        $("#capture_btn").fadeOut();
+        $(".map_field > div > .row .area_name").css({"animation":"none"});
         mapHover(2);
+        $("#capture_btn").fadeOut();
         // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
         html2canvas(document.querySelector("#capture_area")).then(canvas => {
             saveAs(canvas.toDataURL('image/png'), "클랜전.png");
         });
-        console.log("언제 찍힘?");
-        mapHover(1);
+
+        setTimeout(function() {
+            console.log("언제 찍힘?");
+            mapHover(1);
+        }, 2000);
     });
 
     function saveAs(uri, filename) {
@@ -346,21 +363,6 @@ $(document).ready(function() {
             document.body.removeChild(link);
         } else {
             window.open(uri);
-        }
-    }
-
-    mapHover(1);
-    function mapHover(ht) {
-        if (ht == 1) {
-            $(".map_field > div").mouseenter(function() {
-                $(this).addClass("on").siblings().addClass("off");
-            });
-
-            $(".map_field > div").mouseleave(function() {
-                $(".map_field > div").removeClass("on").removeClass("off");
-            });
-        } else {
-
         }
     }
 });
