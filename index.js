@@ -295,7 +295,7 @@ $(document).ready(function() {
             memberInsertValue();
         });
     }
-    var member_name_value;
+    var member_name_value = "";
 
     function memberInsertValue() {
         $(".member_insert_input").change(function() {
