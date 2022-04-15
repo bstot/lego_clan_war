@@ -206,10 +206,7 @@ $(document).ready(function() {
         $(".mm"+d).remove();
     }
 
-    mapHover(1);
-
     var memberNum;
-
     $(".column").sortable({
         // 드래그 앤 드롭 단위 css 선택자
         connectWith: ".column",
@@ -443,6 +440,7 @@ function remaindTime() {
 
 }
 
+mapHover(1);
 function mapHover(ht) {
     if (ht == 1) {
         $(".map_field > div").mouseenter(function() {
