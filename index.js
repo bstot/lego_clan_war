@@ -437,7 +437,7 @@ function remaindTime() {
         $(".time-title").css({
             "color":"#ed1846;"
         });
-    } else { //현재시간이 오픈시간보다 늦고 마감시간보다 이르면 마감시간까지 남은 시간을 구한다.
+    } else {     //현재시간이 오픈시간보다 늦고 마감시간보다 이르면 마감시간까지 남은 시간을 구한다.
         $(".time-title").css({
             "color":"blue"
         });
