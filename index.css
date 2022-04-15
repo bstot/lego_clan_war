@@ -149,6 +149,7 @@ body {
 .insert_member .class_select ul li h4 {
     margin-bottom: 10px;
     font-size: 18px;
+    min-height: 20px;
 }
 
 .insert_member .class_select ul li .member_insert_input {
