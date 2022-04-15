@@ -286,6 +286,8 @@ $(document).ready(function() {
     memberNameChange()
     memberInsertValue();
 
+    var member_name_value = "";
+
     function memberNameChange() {
         $(".member_name").click(function() {
             $(this).parent().prepend("<input class='member_insert_input' type='text' value='"+member_name_value+"'>");
@@ -295,7 +297,6 @@ $(document).ready(function() {
             memberInsertValue();
         });
     }
-    var member_name_value = "";
 
     function memberInsertValue() {
         $(".member_insert_input").change(function() {
