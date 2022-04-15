@@ -321,9 +321,9 @@ body {
     content: "";
     display: inline-block;
     width: 2px;
-    height: 12px;
+    height: 14px;
     position: relative;
-    top: -1px;
+    top: 1px;
     background-color: violet;
     margin: 0 5px;
 }
